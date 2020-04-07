@@ -1,0 +1,61 @@
+@function concatpx($var) {
+  
+  $result : $var+px;
+
+  @return $result;
+}
+
+$margin : 5;
+$margin-bottom-overall : 5;
+
+.full-height{
+  height: calc(100vh - 5px);
+}
+.overflow{
+  overflow: auto;
+}
+
+
+.hf-10{
+  height: 10%;
+}
+.hf-20{
+  height: 20%;
+}
+.hf-60{
+  height: 60%;
+}
+.hf-80{
+  height: 80%;
+}
+.hf-90{
+  height: 90%;
+}
+
+
+.left-sidebar{
+  background-color: #61dafb;
+}
+.left-sidebar-item{
+  position: relative;
+  width: 95%;
+  height: calc((100vh - 35px)/5);
+  margin: concatpx($margin) auto;
+  &-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+.header{
+  background-color: rebeccapurple;
+}
+.main{
+  background-color: yellowgreen;
+}
+.footer{
+  background-color: burlywood;
+}
+.right-sidebar{
+  background-color: rgb(250, 2, 2);
+}
